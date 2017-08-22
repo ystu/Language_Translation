@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>dlnd_language_translation</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>dlnd_language_translation_modified</title><script src="https://unpkg.com/jupyter-js-widgets@2.0.*/dist/embed.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -11726,9 +11726,7 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}
-
-@media print {
+}@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -11749,7 +11747,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -11773,8 +11771,7 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11786,7 +11783,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11806,8 +11803,7 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11818,7 +11814,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">view_sentence_range</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
@@ -11848,9 +11844,53 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Dataset Stats
+Roughly the number of unique words: 227
+Number of sentences: 137861
+Average number of words in a sentence: 13.225277634719028
+
+English sentences 0 to 10:
+new jersey is sometimes quiet during autumn , and it is snowy in april .
+the united states is usually chilly during july , and it is usually freezing in november .
+california is usually quiet during march , and it is usually hot in june .
+the united states is sometimes mild during june , and it is cold in september .
+your least liked fruit is the grape , but my least liked is the apple .
+his favorite fruit is the orange , but my favorite is the grape .
+paris is relaxing during december , but it is usually chilly in july .
+new jersey is busy during spring , and it is never hot in march .
+our least liked fruit is the lemon , but my least liked is the grape .
+the united states is sometimes busy during january , and it is sometimes warm in november .
+
+French sentences 0 to 10:
+new jersey est parfois calme pendant l&#39; automne , et il est neigeux en avril .
+les états-unis est généralement froid en juillet , et il gèle habituellement en novembre .
+california est généralement calme en mars , et il est généralement chaud en juin .
+les états-unis est parfois légère en juin , et il fait froid en septembre .
+votre moins aimé fruit est le raisin , mais mon moins aimé est la pomme .
+son fruit préféré est l&#39;orange , mais mon préféré est le raisin .
+paris est relaxant en décembre , mais il est généralement froid en juillet .
+new jersey est occupé au printemps , et il est jamais chaude en mars .
+notre fruit est moins aimé le citron , mais mon moins aimé est le raisin .
+les états-unis est parfois occupé en janvier , et il est parfois chaud en novembre .
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11865,7 +11905,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">text_to_ids</span><span class="p">(</span><span class="n">source_text</span><span class="p">,</span> <span class="n">target_text</span><span class="p">,</span> <span class="n">source_vocab_to_int</span><span class="p">,</span> <span class="n">target_vocab_to_int</span><span class="p">):</span>
@@ -11885,13 +11925,11 @@ div#notebook {
     <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">source_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
         <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">source_vocab_to_int</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span>
         <span class="n">source_text_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">source_text_id</span><span class="p">)</span>
     
     <span class="c1"># target_text</span>
     <span class="k">for</span> <span class="n">sentence</span> <span class="ow">in</span> <span class="n">target_text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">):</span>
         <span class="n">ids</span> <span class="o">=</span> <span class="p">[</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">sentence</span><span class="o">.</span><span class="n">split</span><span class="p">()]</span> <span class="o">+</span> <span class="p">[</span><span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">]]</span>
         <span class="n">target_text_id</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ids</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">target_text_id</span><span class="p">)</span>    
     
     
     <span class="k">return</span> <span class="n">source_text_id</span><span class="p">,</span> <span class="n">target_text_id</span>
@@ -11906,9 +11944,26 @@ div#notebook {
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Tests Passed
+</pre>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11919,7 +11974,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11933,8 +11988,7 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11945,7 +11999,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -11963,8 +12017,7 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -11975,7 +12028,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12006,7 +12059,9 @@ div#notebook {
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>TensorFlow Version: 1.2.1
@@ -12019,8 +12074,7 @@ Default GPU Device: /gpu:0
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12051,7 +12105,7 @@ Default GPU Device: /gpu:0
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">model_inputs</span><span class="p">():</span>
@@ -12063,11 +12117,11 @@ Default GPU Device: /gpu:0
     <span class="c1"># TODO: Implement Function</span>
     <span class="n">input_data</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
     <span class="n">targets</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">])</span>
-    <span class="n">lr</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
-    <span class="n">keep_prob</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;keep_prob&#39;</span><span class="p">)</span>
-    <span class="n">target_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target_sequence_length&#39;</span><span class="p">)</span>
+    <span class="n">lr</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="n">keep_prob</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">float32</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;keep_prob&#39;</span><span class="p">)</span>
+    <span class="n">target_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,]</span> <span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;target_sequence_length&#39;</span><span class="p">)</span>
     <span class="n">max_target_len</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">reduce_max</span><span class="p">(</span><span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;max_target_len&#39;</span><span class="p">)</span>
-    <span class="n">source_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;source_sequence_length&#39;</span><span class="p">)</span>
+    <span class="n">source_sequence_length</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">placeholder</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="p">[</span><span class="kc">None</span><span class="p">,],</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;source_sequence_length&#39;</span><span class="p">)</span>
     
     <span class="k">return</span> <span class="n">input_data</span><span class="p">,</span> <span class="n">targets</span><span class="p">,</span> <span class="n">lr</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">target_sequence_length</span><span class="p">,</span> <span class="n">max_target_len</span><span class="p">,</span> <span class="n">source_sequence_length</span>
 
@@ -12087,7 +12141,9 @@ Default GPU Device: /gpu:0
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>ERROR:tensorflow:==================================
@@ -12095,21 +12151,14 @@ Object was never used (type &lt;class &#39;tensorflow.python.framework.ops.Opera
 &lt;tf.Operation &#39;assert_rank_2/Assert/Assert&#39; type=Assert&gt;
 If you want to mark it as used call its &#34;mark_used()&#34; method.
 It was originally created here:
-[&#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-3-48dd553cd166&gt;&#34;, line 22, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/github/Language_Translation/problem_unittests.py&#34;, line 106, in test_model_inputs\n    assert tf.assert_rank(lr, 0, message=\&#39;Learning Rate has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
+[&#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-03855687664b&gt;&#34;, line 22, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/github/Language_Translation/problem_unittests.py&#34;, line 106, in test_model_inputs\n    assert tf.assert_rank(lr, 0, message=\&#39;Learning Rate has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
 ==================================
 ERROR:tensorflow:==================================
 Object was never used (type &lt;class &#39;tensorflow.python.framework.ops.Operation&#39;&gt;):
 &lt;tf.Operation &#39;assert_rank_3/Assert/Assert&#39; type=Assert&gt;
 If you want to mark it as used call its &#34;mark_used()&#34; method.
 It was originally created here:
-[&#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-3-48dd553cd166&gt;&#34;, line 22, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/github/Language_Translation/problem_unittests.py&#34;, line 107, in test_model_inputs\n    assert tf.assert_rank(keep_prob, 0, message=\&#39;Keep Probability has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
-==================================
-ERROR:tensorflow:==================================
-Object was never used (type &lt;class &#39;tensorflow.python.framework.ops.Operation&#39;&gt;):
-&lt;tf.Operation &#39;assert_rank_6/Assert/Assert&#39; type=Assert&gt;
-If you want to mark it as used call its &#34;mark_used()&#34; method.
-It was originally created here:
-[&#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-3-48dd553cd166&gt;&#34;, line 22, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/github/Language_Translation/problem_unittests.py&#34;, line 110, in test_model_inputs\n    assert tf.assert_rank(source_sequence_length, 1, message=\&#39;Source Sequence Lengthhas wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
+[&#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 184, in _run_module_as_main\n    &#34;__main__&#34;, mod_spec)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/runpy.py&#34;, line 85, in _run_code\n    exec(code, run_globals)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/__main__.py&#34;, line 3, in &lt;module&gt;\n    app.launch_new_instance()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/traitlets/config/application.py&#34;, line 658, in launch_instance\n    app.start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelapp.py&#34;, line 474, in start\n    ioloop.IOLoop.instance().start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/ioloop.py&#34;, line 177, in start\n    super(ZMQIOLoop, self).start()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/ioloop.py&#34;, line 887, in start\n    handler_func(fd_obj, events)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 440, in _handle_events\n    self._handle_recv()&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 472, in _handle_recv\n    self._run_callback(callback, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/zmq/eventloop/zmqstream.py&#34;, line 414, in _run_callback\n    callback(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tornado/stack_context.py&#34;, line 275, in null_wrapper\n    return fn(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 276, in dispatcher\n    return self.dispatch_shell(stream, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 228, in dispatch_shell\n    handler(stream, idents, msg)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/kernelbase.py&#34;, line 390, in execute_request\n    user_expressions, allow_stdin)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/ipkernel.py&#34;, line 196, in do_execute\n    res = shell.run_cell(code, store_history=store_history, silent=silent)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/ipykernel/zmqshell.py&#34;, line 501, in run_cell\n    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2717, in run_cell\n    interactivity=interactivity, compiler=compiler, result=result)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2827, in run_ast_nodes\n    if self.run_code(code, result):&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/IPython/core/interactiveshell.py&#34;, line 2881, in run_code\n    exec(code_obj, self.user_global_ns, self.user_ns)&#39;, &#39;File &#34;&lt;ipython-input-7-03855687664b&gt;&#34;, line 22, in &lt;module&gt;\n    tests.test_model_inputs(model_inputs)&#39;, &#39;File &#34;/home/carnd/github/Language_Translation/problem_unittests.py&#34;, line 107, in test_model_inputs\n    assert tf.assert_rank(keep_prob, 0, message=\&#39;Keep Probability has wrong rank\&#39;)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 617, in assert_rank\n    dynamic_condition, data, summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/ops/check_ops.py&#34;, line 571, in _assert_rank_condition\n    return control_flow_ops.Assert(condition, data, summarize=summarize)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 170, in wrapped\n    return _add_should_use_warning(fn(*args, **kwargs))&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 139, in _add_should_use_warning\n    wrapped = TFShouldUseWarningWrapper(x)&#39;, &#39;File &#34;/home/carnd/anaconda3/envs/tensorflow2/lib/python3.5/site-packages/tensorflow/python/util/tf_should_use.py&#34;, line 96, in __init__\n    stack = [s.strip() for s in traceback.format_stack()]&#39;]
 ==================================
 Tests Passed
 </pre>
@@ -12120,8 +12169,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12132,7 +12180,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">process_decoder_input</span><span class="p">(</span><span class="n">target_data</span><span class="p">,</span> <span class="n">target_vocab_to_int</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
@@ -12164,7 +12212,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12176,8 +12226,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12193,7 +12242,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">imp</span> <span class="k">import</span> <span class="n">reload</span>
@@ -12218,7 +12267,8 @@ Tests Passed
     
     <span class="k">def</span> <span class="nf">make_cell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">):</span>
         <span class="n">enc_cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">LSTMCell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">,</span> <span class="n">initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">random_normal_initializer</span><span class="p">(</span><span class="o">-</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">enc_cell</span>
+        <span class="n">drop</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">DropoutWrapper</span><span class="p">(</span><span class="n">enc_cell</span><span class="p">,</span> <span class="n">output_keep_prob</span><span class="o">=</span><span class="n">keep_prob</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">drop</span>
         
     <span class="n">enc_cell</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">rnn</span><span class="o">.</span><span class="n">MultiRNNCell</span><span class="p">([</span><span class="n">make_cell</span><span class="p">(</span><span class="n">rnn_size</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_layers</span><span class="p">)])</span>
     
@@ -12241,7 +12291,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12253,8 +12305,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12270,7 +12321,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embed_input</span><span class="p">,</span> 
@@ -12301,6 +12352,7 @@ Tests Passed
     <span class="n">training_decoder_output</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">contrib</span><span class="o">.</span><span class="n">seq2seq</span><span class="o">.</span><span class="n">dynamic_decode</span><span class="p">(</span><span class="n">training_decoder</span><span class="p">,</span> 
                                                                 <span class="n">impute_finished</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
                                                                 <span class="n">maximum_iterations</span><span class="o">=</span><span class="n">max_summary_length</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    
       
     <span class="k">return</span> <span class="n">training_decoder_output</span>
 
@@ -12321,7 +12373,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12333,8 +12387,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12350,7 +12403,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> <span class="n">dec_embeddings</span><span class="p">,</span> <span class="n">start_of_sequence_id</span><span class="p">,</span>
@@ -12401,7 +12454,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12413,8 +12468,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12433,7 +12487,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">decoding_layer</span><span class="p">(</span><span class="n">dec_input</span><span class="p">,</span> <span class="n">encoder_state</span><span class="p">,</span>
@@ -12474,14 +12528,15 @@ Tests Passed
     <span class="n">output_layer</span> <span class="o">=</span> <span class="n">Dense</span><span class="p">(</span><span class="n">target_vocab_size</span><span class="p">,</span>
                          <span class="n">kernel_initializer</span><span class="o">=</span><span class="n">tf</span><span class="o">.</span><span class="n">truncated_normal_initializer</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">stddev</span><span class="o">=</span><span class="mf">0.1</span><span class="p">))</span>
     
+    <span class="n">start_of_sequence_id</span> <span class="o">=</span> <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;GO&gt;&#39;</span><span class="p">]</span>
+    <span class="n">end_of_sequence_id</span> <span class="o">=</span> <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">]</span>
+    
     <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s2">&quot;decode&quot;</span><span class="p">):</span>
         <span class="n">training_decoder_output</span> <span class="o">=</span> <span class="n">decoding_layer_train</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> 
                                                        <span class="n">dec_embed_input</span><span class="p">,</span> <span class="n">target_sequence_length</span><span class="p">,</span> 
                                                        <span class="n">max_target_sequence_length</span><span class="p">,</span> <span class="n">output_layer</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">)</span>
         
-        <span class="n">start_of_sequence_id</span> <span class="o">=</span> <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;GO&gt;&#39;</span><span class="p">]</span>
-        <span class="n">end_of_sequence_id</span> <span class="o">=</span> <span class="n">target_vocab_to_int</span><span class="p">[</span><span class="s1">&#39;&lt;EOS&gt;&#39;</span><span class="p">]</span>
-        
+    <span class="k">with</span> <span class="n">tf</span><span class="o">.</span><span class="n">variable_scope</span><span class="p">(</span><span class="s2">&quot;decode&quot;</span><span class="p">,</span> <span class="n">reuse</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
         <span class="n">inference_decoder_output</span> <span class="o">=</span> <span class="n">decoding_layer_infer</span><span class="p">(</span><span class="n">encoder_state</span><span class="p">,</span> <span class="n">dec_cell</span><span class="p">,</span> 
                                                         <span class="n">dec_embeddings</span><span class="p">,</span> <span class="n">start_of_sequence_id</span><span class="p">,</span> 
                                                         <span class="n">end_of_sequence_id</span><span class="p">,</span> <span class="n">max_target_sequence_length</span><span class="p">,</span> <span class="n">target_vocab_size</span><span class="p">,</span> 
@@ -12507,7 +12562,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12519,8 +12576,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12536,7 +12592,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">seq2seq_model</span><span class="p">(</span><span class="n">input_data</span><span class="p">,</span> <span class="n">target_data</span><span class="p">,</span> <span class="n">keep_prob</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span>
@@ -12597,7 +12653,9 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -12609,8 +12667,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12632,20 +12689,20 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Number of Epochs</span>
-<span class="n">epochs</span> <span class="o">=</span> <span class="mi">9</span>
+<span class="n">epochs</span> <span class="o">=</span> <span class="mi">20</span>
 <span class="c1"># Batch Size</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">512</span>
 <span class="c1"># RNN Size</span>
-<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">rnn_size</span> <span class="o">=</span> <span class="mi">256</span>
 <span class="c1"># Number of Layers</span>
 <span class="n">num_layers</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="c1"># Embedding Size</span>
-<span class="n">encoding_embedding_size</span> <span class="o">=</span> <span class="mi">256</span>
-<span class="n">decoding_embedding_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">encoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
+<span class="n">decoding_embedding_size</span> <span class="o">=</span> <span class="mi">128</span>
 <span class="c1"># Learning Rate</span>
 <span class="n">learning_rate</span> <span class="o">=</span> <span class="mf">0.001</span>
 <span class="c1"># Dropout Keep Probability</span>
@@ -12658,8 +12715,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12670,7 +12726,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12729,8 +12785,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12741,7 +12796,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12783,8 +12838,7 @@ Tests Passed
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -12795,7 +12849,7 @@ Tests Passed
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -12888,126 +12942,271 @@ Tests Passed
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
 
+
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch   0 Batch   20/269 - Train Accuracy: 0.2662, Validation Accuracy: 0.3352, Loss: 3.6377
-Epoch   0 Batch   40/269 - Train Accuracy: 0.0854, Validation Accuracy: 0.1610, Loss: 3.1264
-Epoch   0 Batch   60/269 - Train Accuracy: 0.3253, Validation Accuracy: 0.3297, Loss: 2.6998
-Epoch   0 Batch   80/269 - Train Accuracy: 0.3650, Validation Accuracy: 0.3944, Loss: 2.5282
-Epoch   0 Batch  100/269 - Train Accuracy: 0.4304, Validation Accuracy: 0.4435, Loss: 2.2961
-Epoch   0 Batch  120/269 - Train Accuracy: 0.3961, Validation Accuracy: 0.4600, Loss: 2.2215
-Epoch   0 Batch  140/269 - Train Accuracy: 0.4481, Validation Accuracy: 0.4737, Loss: 1.9189
-Epoch   0 Batch  160/269 - Train Accuracy: 0.4477, Validation Accuracy: 0.4822, Loss: 1.7430
-Epoch   0 Batch  180/269 - Train Accuracy: 0.4605, Validation Accuracy: 0.4903, Loss: 1.5925
-Epoch   0 Batch  200/269 - Train Accuracy: 0.4428, Validation Accuracy: 0.4846, Loss: 1.5222
-Epoch   0 Batch  220/269 - Train Accuracy: 0.4683, Validation Accuracy: 0.4875, Loss: 1.3100
-Epoch   0 Batch  240/269 - Train Accuracy: 0.4968, Validation Accuracy: 0.4854, Loss: 1.1796
-Epoch   0 Batch  260/269 - Train Accuracy: 0.4535, Validation Accuracy: 0.4921, Loss: 1.2360
-Epoch   1 Batch   20/269 - Train Accuracy: 0.4620, Validation Accuracy: 0.5105, Loss: 1.1099
-Epoch   1 Batch   40/269 - Train Accuracy: 0.4901, Validation Accuracy: 0.5083, Loss: 1.0301
-Epoch   1 Batch   60/269 - Train Accuracy: 0.5455, Validation Accuracy: 0.5508, Loss: 0.9016
-Epoch   1 Batch   80/269 - Train Accuracy: 0.5565, Validation Accuracy: 0.5583, Loss: 0.8841
-Epoch   1 Batch  100/269 - Train Accuracy: 0.5839, Validation Accuracy: 0.5826, Loss: 0.8394
-Epoch   1 Batch  120/269 - Train Accuracy: 0.5510, Validation Accuracy: 0.5851, Loss: 0.8369
-Epoch   1 Batch  140/269 - Train Accuracy: 0.5816, Validation Accuracy: 0.5812, Loss: 0.7830
-Epoch   1 Batch  160/269 - Train Accuracy: 0.5868, Validation Accuracy: 0.5947, Loss: 0.7523
-Epoch   1 Batch  180/269 - Train Accuracy: 0.5932, Validation Accuracy: 0.5962, Loss: 0.7182
-Epoch   1 Batch  200/269 - Train Accuracy: 0.5802, Validation Accuracy: 0.5956, Loss: 0.7258
-Epoch   1 Batch  220/269 - Train Accuracy: 0.6077, Validation Accuracy: 0.6053, Loss: 0.6454
-Epoch   1 Batch  240/269 - Train Accuracy: 0.6393, Validation Accuracy: 0.6129, Loss: 0.6082
-Epoch   1 Batch  260/269 - Train Accuracy: 0.6038, Validation Accuracy: 0.6230, Loss: 0.6810
-Epoch   2 Batch   20/269 - Train Accuracy: 0.6127, Validation Accuracy: 0.6167, Loss: 0.6514
-Epoch   2 Batch   40/269 - Train Accuracy: 0.6109, Validation Accuracy: 0.6278, Loss: 0.6455
-Epoch   2 Batch   60/269 - Train Accuracy: 0.6541, Validation Accuracy: 0.6338, Loss: 0.5759
-Epoch   2 Batch   80/269 - Train Accuracy: 0.6453, Validation Accuracy: 0.6359, Loss: 0.5934
-Epoch   2 Batch  100/269 - Train Accuracy: 0.6607, Validation Accuracy: 0.6406, Loss: 0.5765
-Epoch   2 Batch  120/269 - Train Accuracy: 0.6515, Validation Accuracy: 0.6541, Loss: 0.5888
-Epoch   2 Batch  140/269 - Train Accuracy: 0.6720, Validation Accuracy: 0.6685, Loss: 0.5744
-Epoch   2 Batch  160/269 - Train Accuracy: 0.6675, Validation Accuracy: 0.6712, Loss: 0.5440
-Epoch   2 Batch  180/269 - Train Accuracy: 0.6771, Validation Accuracy: 0.6696, Loss: 0.5364
-Epoch   2 Batch  200/269 - Train Accuracy: 0.6674, Validation Accuracy: 0.6772, Loss: 0.5447
-Epoch   2 Batch  220/269 - Train Accuracy: 0.6906, Validation Accuracy: 0.6787, Loss: 0.4891
-Epoch   2 Batch  240/269 - Train Accuracy: 0.7171, Validation Accuracy: 0.6922, Loss: 0.4630
-Epoch   2 Batch  260/269 - Train Accuracy: 0.6741, Validation Accuracy: 0.6870, Loss: 0.5246
-Epoch   3 Batch   20/269 - Train Accuracy: 0.6980, Validation Accuracy: 0.6895, Loss: 0.5002
-Epoch   3 Batch   40/269 - Train Accuracy: 0.6832, Validation Accuracy: 0.6904, Loss: 0.5000
-Epoch   3 Batch   60/269 - Train Accuracy: 0.7194, Validation Accuracy: 0.7014, Loss: 0.4430
-Epoch   3 Batch   80/269 - Train Accuracy: 0.7347, Validation Accuracy: 0.7082, Loss: 0.4489
-Epoch   3 Batch  100/269 - Train Accuracy: 0.7448, Validation Accuracy: 0.7111, Loss: 0.4329
-Epoch   3 Batch  120/269 - Train Accuracy: 0.7206, Validation Accuracy: 0.7200, Loss: 0.4483
-Epoch   3 Batch  140/269 - Train Accuracy: 0.7371, Validation Accuracy: 0.7205, Loss: 0.4337
-Epoch   3 Batch  160/269 - Train Accuracy: 0.7378, Validation Accuracy: 0.7232, Loss: 0.4138
-Epoch   3 Batch  180/269 - Train Accuracy: 0.7527, Validation Accuracy: 0.7327, Loss: 0.4068
-Epoch   3 Batch  200/269 - Train Accuracy: 0.7327, Validation Accuracy: 0.7326, Loss: 0.4111
-Epoch   3 Batch  220/269 - Train Accuracy: 0.7534, Validation Accuracy: 0.7451, Loss: 0.3733
-Epoch   3 Batch  240/269 - Train Accuracy: 0.7798, Validation Accuracy: 0.7502, Loss: 0.3491
-Epoch   3 Batch  260/269 - Train Accuracy: 0.7452, Validation Accuracy: 0.7540, Loss: 0.3966
-Epoch   4 Batch   20/269 - Train Accuracy: 0.7591, Validation Accuracy: 0.7643, Loss: 0.3748
-Epoch   4 Batch   40/269 - Train Accuracy: 0.7656, Validation Accuracy: 0.7793, Loss: 0.3719
-Epoch   4 Batch   60/269 - Train Accuracy: 0.7772, Validation Accuracy: 0.7624, Loss: 0.3387
-Epoch   4 Batch   80/269 - Train Accuracy: 0.8000, Validation Accuracy: 0.7828, Loss: 0.3311
-Epoch   4 Batch  100/269 - Train Accuracy: 0.8025, Validation Accuracy: 0.7889, Loss: 0.3204
-Epoch   4 Batch  120/269 - Train Accuracy: 0.7794, Validation Accuracy: 0.7805, Loss: 0.3343
-Epoch   4 Batch  140/269 - Train Accuracy: 0.7945, Validation Accuracy: 0.7971, Loss: 0.3205
-Epoch   4 Batch  160/269 - Train Accuracy: 0.8035, Validation Accuracy: 0.7990, Loss: 0.3043
-Epoch   4 Batch  180/269 - Train Accuracy: 0.8248, Validation Accuracy: 0.8074, Loss: 0.2932
-Epoch   4 Batch  200/269 - Train Accuracy: 0.8131, Validation Accuracy: 0.8048, Loss: 0.3011
-Epoch   4 Batch  220/269 - Train Accuracy: 0.8276, Validation Accuracy: 0.8151, Loss: 0.2689
-Epoch   4 Batch  240/269 - Train Accuracy: 0.8354, Validation Accuracy: 0.8180, Loss: 0.2521
-Epoch   4 Batch  260/269 - Train Accuracy: 0.8144, Validation Accuracy: 0.8184, Loss: 0.2827
-Epoch   5 Batch   20/269 - Train Accuracy: 0.8205, Validation Accuracy: 0.8230, Loss: 0.2769
-Epoch   5 Batch   40/269 - Train Accuracy: 0.8242, Validation Accuracy: 0.8308, Loss: 0.2725
-Epoch   5 Batch   60/269 - Train Accuracy: 0.8401, Validation Accuracy: 0.8277, Loss: 0.2408
-Epoch   5 Batch   80/269 - Train Accuracy: 0.8431, Validation Accuracy: 0.8423, Loss: 0.2375
-Epoch   5 Batch  100/269 - Train Accuracy: 0.8411, Validation Accuracy: 0.8370, Loss: 0.2315
-Epoch   5 Batch  120/269 - Train Accuracy: 0.8438, Validation Accuracy: 0.8398, Loss: 0.2413
-Epoch   5 Batch  140/269 - Train Accuracy: 0.8439, Validation Accuracy: 0.8388, Loss: 0.2336
-Epoch   5 Batch  160/269 - Train Accuracy: 0.8426, Validation Accuracy: 0.8496, Loss: 0.2169
-Epoch   5 Batch  180/269 - Train Accuracy: 0.8610, Validation Accuracy: 0.8477, Loss: 0.2213
-Epoch   5 Batch  200/269 - Train Accuracy: 0.8516, Validation Accuracy: 0.8518, Loss: 0.2168
-Epoch   5 Batch  220/269 - Train Accuracy: 0.8640, Validation Accuracy: 0.8518, Loss: 0.1965
-Epoch   5 Batch  240/269 - Train Accuracy: 0.8713, Validation Accuracy: 0.8607, Loss: 0.1849
-Epoch   5 Batch  260/269 - Train Accuracy: 0.8525, Validation Accuracy: 0.8573, Loss: 0.2094
-Epoch   6 Batch   20/269 - Train Accuracy: 0.8625, Validation Accuracy: 0.8658, Loss: 0.1984
-Epoch   6 Batch   40/269 - Train Accuracy: 0.8531, Validation Accuracy: 0.8725, Loss: 0.2006
-Epoch   6 Batch   60/269 - Train Accuracy: 0.8755, Validation Accuracy: 0.8732, Loss: 0.1779
-Epoch   6 Batch   80/269 - Train Accuracy: 0.8880, Validation Accuracy: 0.8795, Loss: 0.1831
-Epoch   6 Batch  100/269 - Train Accuracy: 0.8712, Validation Accuracy: 0.8724, Loss: 0.1724
-Epoch   6 Batch  120/269 - Train Accuracy: 0.8814, Validation Accuracy: 0.8855, Loss: 0.1770
-Epoch   6 Batch  140/269 - Train Accuracy: 0.8715, Validation Accuracy: 0.8894, Loss: 0.1779
-Epoch   6 Batch  160/269 - Train Accuracy: 0.8680, Validation Accuracy: 0.8817, Loss: 0.1668
-Epoch   6 Batch  180/269 - Train Accuracy: 0.8841, Validation Accuracy: 0.8793, Loss: 0.1663
-Epoch   6 Batch  200/269 - Train Accuracy: 0.8773, Validation Accuracy: 0.8893, Loss: 0.1669
-Epoch   6 Batch  220/269 - Train Accuracy: 0.8846, Validation Accuracy: 0.8828, Loss: 0.1485
-Epoch   6 Batch  240/269 - Train Accuracy: 0.9010, Validation Accuracy: 0.8933, Loss: 0.1381
-Epoch   6 Batch  260/269 - Train Accuracy: 0.8770, Validation Accuracy: 0.8984, Loss: 0.1610
-Epoch   7 Batch   20/269 - Train Accuracy: 0.8946, Validation Accuracy: 0.9015, Loss: 0.1555
-Epoch   7 Batch   40/269 - Train Accuracy: 0.8824, Validation Accuracy: 0.8961, Loss: 0.1582
-Epoch   7 Batch   60/269 - Train Accuracy: 0.9007, Validation Accuracy: 0.9049, Loss: 0.1389
-Epoch   7 Batch   80/269 - Train Accuracy: 0.9007, Validation Accuracy: 0.9086, Loss: 0.1430
-Epoch   7 Batch  100/269 - Train Accuracy: 0.8995, Validation Accuracy: 0.9022, Loss: 0.1423
-Epoch   7 Batch  120/269 - Train Accuracy: 0.9051, Validation Accuracy: 0.9034, Loss: 0.1457
-Epoch   7 Batch  140/269 - Train Accuracy: 0.8992, Validation Accuracy: 0.9123, Loss: 0.1395
-Epoch   7 Batch  160/269 - Train Accuracy: 0.8996, Validation Accuracy: 0.9099, Loss: 0.1257
-Epoch   7 Batch  180/269 - Train Accuracy: 0.9068, Validation Accuracy: 0.9107, Loss: 0.1266
-Epoch   7 Batch  200/269 - Train Accuracy: 0.9050, Validation Accuracy: 0.9057, Loss: 0.1228
-Epoch   7 Batch  220/269 - Train Accuracy: 0.8939, Validation Accuracy: 0.9035, Loss: 0.1132
-Epoch   7 Batch  240/269 - Train Accuracy: 0.9214, Validation Accuracy: 0.9152, Loss: 0.1031
-Epoch   7 Batch  260/269 - Train Accuracy: 0.9002, Validation Accuracy: 0.9236, Loss: 0.1214
-Epoch   8 Batch   20/269 - Train Accuracy: 0.9133, Validation Accuracy: 0.9199, Loss: 0.1107
-Epoch   8 Batch   40/269 - Train Accuracy: 0.9035, Validation Accuracy: 0.9260, Loss: 0.1105
-Epoch   8 Batch   60/269 - Train Accuracy: 0.9162, Validation Accuracy: 0.9223, Loss: 0.0983
-Epoch   8 Batch   80/269 - Train Accuracy: 0.9342, Validation Accuracy: 0.9221, Loss: 0.0953
-Epoch   8 Batch  100/269 - Train Accuracy: 0.9292, Validation Accuracy: 0.9237, Loss: 0.0996
-Epoch   8 Batch  120/269 - Train Accuracy: 0.9270, Validation Accuracy: 0.9207, Loss: 0.0959
-Epoch   8 Batch  140/269 - Train Accuracy: 0.9175, Validation Accuracy: 0.9366, Loss: 0.0942
-Epoch   8 Batch  160/269 - Train Accuracy: 0.9245, Validation Accuracy: 0.9369, Loss: 0.0818
-Epoch   8 Batch  180/269 - Train Accuracy: 0.9266, Validation Accuracy: 0.9282, Loss: 0.0873
-Epoch   8 Batch  200/269 - Train Accuracy: 0.9176, Validation Accuracy: 0.9223, Loss: 0.0845
-Epoch   8 Batch  220/269 - Train Accuracy: 0.9371, Validation Accuracy: 0.9350, Loss: 0.0696
-Epoch   8 Batch  240/269 - Train Accuracy: 0.9450, Validation Accuracy: 0.9431, Loss: 0.0661
-Epoch   8 Batch  260/269 - Train Accuracy: 0.9244, Validation Accuracy: 0.9399, Loss: 0.0790
+<pre>Epoch   0 Batch   20/269 - Train Accuracy: 0.3056, Validation Accuracy: 0.3683, Loss: 3.2579
+Epoch   0 Batch   40/269 - Train Accuracy: 0.3154, Validation Accuracy: 0.3781, Loss: 2.8900
+Epoch   0 Batch   60/269 - Train Accuracy: 0.3646, Validation Accuracy: 0.3722, Loss: 2.3716
+Epoch   0 Batch   80/269 - Train Accuracy: 0.3393, Validation Accuracy: 0.3656, Loss: 2.0495
+Epoch   0 Batch  100/269 - Train Accuracy: 0.3531, Validation Accuracy: 0.3813, Loss: 1.7675
+Epoch   0 Batch  120/269 - Train Accuracy: 0.3156, Validation Accuracy: 0.3769, Loss: 1.6620
+Epoch   0 Batch  140/269 - Train Accuracy: 0.3538, Validation Accuracy: 0.3770, Loss: 1.4348
+Epoch   0 Batch  160/269 - Train Accuracy: 0.3552, Validation Accuracy: 0.3879, Loss: 1.3082
+Epoch   0 Batch  180/269 - Train Accuracy: 0.3750, Validation Accuracy: 0.3952, Loss: 1.1593
+Epoch   0 Batch  200/269 - Train Accuracy: 0.3378, Validation Accuracy: 0.3759, Loss: 1.1066
+Epoch   0 Batch  220/269 - Train Accuracy: 0.3934, Validation Accuracy: 0.3849, Loss: 0.9438
+Epoch   0 Batch  240/269 - Train Accuracy: 0.4388, Validation Accuracy: 0.4033, Loss: 0.8510
+Epoch   0 Batch  260/269 - Train Accuracy: 0.3810, Validation Accuracy: 0.4218, Loss: 0.9108
+Epoch   1 Batch   20/269 - Train Accuracy: 0.4129, Validation Accuracy: 0.4519, Loss: 0.8491
+Epoch   1 Batch   40/269 - Train Accuracy: 0.4298, Validation Accuracy: 0.4793, Loss: 0.8151
+Epoch   1 Batch   60/269 - Train Accuracy: 0.4816, Validation Accuracy: 0.4878, Loss: 0.7280
+Epoch   1 Batch   80/269 - Train Accuracy: 0.4894, Validation Accuracy: 0.5025, Loss: 0.7295
+Epoch   1 Batch  100/269 - Train Accuracy: 0.4866, Validation Accuracy: 0.5059, Loss: 0.7022
+Epoch   1 Batch  120/269 - Train Accuracy: 0.4943, Validation Accuracy: 0.5219, Loss: 0.7082
+Epoch   1 Batch  140/269 - Train Accuracy: 0.5414, Validation Accuracy: 0.5305, Loss: 0.6810
+Epoch   1 Batch  160/269 - Train Accuracy: 0.5310, Validation Accuracy: 0.5290, Loss: 0.6464
+Epoch   1 Batch  180/269 - Train Accuracy: 0.5624, Validation Accuracy: 0.5376, Loss: 0.6363
+Epoch   1 Batch  200/269 - Train Accuracy: 0.5662, Validation Accuracy: 0.5643, Loss: 0.6553
+Epoch   1 Batch  220/269 - Train Accuracy: 0.5807, Validation Accuracy: 0.5776, Loss: 0.5884
+Epoch   1 Batch  240/269 - Train Accuracy: 0.6219, Validation Accuracy: 0.5749, Loss: 0.5476
+Epoch   1 Batch  260/269 - Train Accuracy: 0.5606, Validation Accuracy: 0.5758, Loss: 0.6286
+Epoch   2 Batch   20/269 - Train Accuracy: 0.5704, Validation Accuracy: 0.5884, Loss: 0.6237
+Epoch   2 Batch   40/269 - Train Accuracy: 0.5324, Validation Accuracy: 0.5578, Loss: 0.6448
+Epoch   2 Batch   60/269 - Train Accuracy: 0.5431, Validation Accuracy: 0.5403, Loss: 0.5811
+Epoch   2 Batch   80/269 - Train Accuracy: 0.5719, Validation Accuracy: 0.5660, Loss: 0.6035
+Epoch   2 Batch  100/269 - Train Accuracy: 0.5622, Validation Accuracy: 0.5558, Loss: 0.5787
+Epoch   2 Batch  120/269 - Train Accuracy: 0.5184, Validation Accuracy: 0.5398, Loss: 0.6261
+Epoch   2 Batch  140/269 - Train Accuracy: 0.5702, Validation Accuracy: 0.5583, Loss: 0.5974
+Epoch   2 Batch  160/269 - Train Accuracy: 0.5622, Validation Accuracy: 0.5756, Loss: 0.5623
+Epoch   2 Batch  180/269 - Train Accuracy: 0.5838, Validation Accuracy: 0.5757, Loss: 0.5579
+Epoch   2 Batch  200/269 - Train Accuracy: 0.5762, Validation Accuracy: 0.5835, Loss: 0.5735
+Epoch   2 Batch  220/269 - Train Accuracy: 0.5963, Validation Accuracy: 0.5915, Loss: 0.5197
+Epoch   2 Batch  240/269 - Train Accuracy: 0.6354, Validation Accuracy: 0.5842, Loss: 0.4754
+Epoch   2 Batch  260/269 - Train Accuracy: 0.5690, Validation Accuracy: 0.6021, Loss: 0.5492
+Epoch   3 Batch   20/269 - Train Accuracy: 0.5871, Validation Accuracy: 0.5884, Loss: 0.5380
+Epoch   3 Batch   40/269 - Train Accuracy: 0.5585, Validation Accuracy: 0.6104, Loss: 0.5413
+Epoch   3 Batch   60/269 - Train Accuracy: 0.6034, Validation Accuracy: 0.6123, Loss: 0.4899
+Epoch   3 Batch   80/269 - Train Accuracy: 0.6179, Validation Accuracy: 0.6144, Loss: 0.4890
+Epoch   3 Batch  100/269 - Train Accuracy: 0.6501, Validation Accuracy: 0.6339, Loss: 0.4797
+Epoch   3 Batch  120/269 - Train Accuracy: 0.6119, Validation Accuracy: 0.6263, Loss: 0.5031
+Epoch   3 Batch  140/269 - Train Accuracy: 0.6336, Validation Accuracy: 0.6407, Loss: 0.4774
+Epoch   3 Batch  160/269 - Train Accuracy: 0.6365, Validation Accuracy: 0.6505, Loss: 0.4588
+Epoch   3 Batch  180/269 - Train Accuracy: 0.6274, Validation Accuracy: 0.6357, Loss: 0.4643
+Epoch   3 Batch  200/269 - Train Accuracy: 0.6268, Validation Accuracy: 0.6550, Loss: 0.4739
+Epoch   3 Batch  220/269 - Train Accuracy: 0.6643, Validation Accuracy: 0.6570, Loss: 0.4297
+Epoch   3 Batch  240/269 - Train Accuracy: 0.7073, Validation Accuracy: 0.6569, Loss: 0.3922
+Epoch   3 Batch  260/269 - Train Accuracy: 0.6488, Validation Accuracy: 0.6631, Loss: 0.4628
+Epoch   4 Batch   20/269 - Train Accuracy: 0.6480, Validation Accuracy: 0.6639, Loss: 0.4515
+Epoch   4 Batch   40/269 - Train Accuracy: 0.6288, Validation Accuracy: 0.6705, Loss: 0.4564
+Epoch   4 Batch   60/269 - Train Accuracy: 0.6608, Validation Accuracy: 0.6656, Loss: 0.4145
+Epoch   4 Batch   80/269 - Train Accuracy: 0.6819, Validation Accuracy: 0.6851, Loss: 0.4152
+Epoch   4 Batch  100/269 - Train Accuracy: 0.7017, Validation Accuracy: 0.6792, Loss: 0.4088
+Epoch   4 Batch  120/269 - Train Accuracy: 0.6791, Validation Accuracy: 0.6815, Loss: 0.4237
+Epoch   4 Batch  140/269 - Train Accuracy: 0.6961, Validation Accuracy: 0.6836, Loss: 0.4089
+Epoch   4 Batch  160/269 - Train Accuracy: 0.6712, Validation Accuracy: 0.6993, Loss: 0.3884
+Epoch   4 Batch  180/269 - Train Accuracy: 0.6711, Validation Accuracy: 0.6784, Loss: 0.3945
+Epoch   4 Batch  200/269 - Train Accuracy: 0.6832, Validation Accuracy: 0.6931, Loss: 0.3993
+Epoch   4 Batch  220/269 - Train Accuracy: 0.7037, Validation Accuracy: 0.6962, Loss: 0.3695
+Epoch   4 Batch  240/269 - Train Accuracy: 0.7042, Validation Accuracy: 0.6809, Loss: 0.3684
+Epoch   4 Batch  260/269 - Train Accuracy: 0.6720, Validation Accuracy: 0.6899, Loss: 0.4139
+Epoch   5 Batch   20/269 - Train Accuracy: 0.6866, Validation Accuracy: 0.7088, Loss: 0.3941
+Epoch   5 Batch   40/269 - Train Accuracy: 0.6839, Validation Accuracy: 0.7155, Loss: 0.3939
+Epoch   5 Batch   60/269 - Train Accuracy: 0.7156, Validation Accuracy: 0.7156, Loss: 0.3552
+Epoch   5 Batch   80/269 - Train Accuracy: 0.7234, Validation Accuracy: 0.7065, Loss: 0.3587
+Epoch   5 Batch  100/269 - Train Accuracy: 0.7243, Validation Accuracy: 0.7157, Loss: 0.3537
+Epoch   5 Batch  120/269 - Train Accuracy: 0.7157, Validation Accuracy: 0.7232, Loss: 0.3641
+Epoch   5 Batch  140/269 - Train Accuracy: 0.7480, Validation Accuracy: 0.7257, Loss: 0.3441
+Epoch   5 Batch  160/269 - Train Accuracy: 0.7168, Validation Accuracy: 0.7243, Loss: 0.3365
+Epoch   5 Batch  180/269 - Train Accuracy: 0.7294, Validation Accuracy: 0.7354, Loss: 0.3319
+Epoch   5 Batch  200/269 - Train Accuracy: 0.7370, Validation Accuracy: 0.7326, Loss: 0.3382
+Epoch   5 Batch  220/269 - Train Accuracy: 0.7487, Validation Accuracy: 0.7260, Loss: 0.3097
+Epoch   5 Batch  240/269 - Train Accuracy: 0.7761, Validation Accuracy: 0.7443, Loss: 0.2813
+Epoch   5 Batch  260/269 - Train Accuracy: 0.7287, Validation Accuracy: 0.7314, Loss: 0.3304
+Epoch   6 Batch   20/269 - Train Accuracy: 0.7403, Validation Accuracy: 0.7499, Loss: 0.3208
+Epoch   6 Batch   40/269 - Train Accuracy: 0.7316, Validation Accuracy: 0.7532, Loss: 0.3238
+Epoch   6 Batch   60/269 - Train Accuracy: 0.7512, Validation Accuracy: 0.7576, Loss: 0.2974
+Epoch   6 Batch   80/269 - Train Accuracy: 0.7626, Validation Accuracy: 0.7455, Loss: 0.2934
+Epoch   6 Batch  100/269 - Train Accuracy: 0.7596, Validation Accuracy: 0.7496, Loss: 0.2918
+Epoch   6 Batch  120/269 - Train Accuracy: 0.7529, Validation Accuracy: 0.7664, Loss: 0.2989
+Epoch   6 Batch  140/269 - Train Accuracy: 0.7739, Validation Accuracy: 0.7638, Loss: 0.2819
+Epoch   6 Batch  160/269 - Train Accuracy: 0.7347, Validation Accuracy: 0.7514, Loss: 0.3046
+Epoch   6 Batch  180/269 - Train Accuracy: 0.7611, Validation Accuracy: 0.7485, Loss: 0.2903
+Epoch   6 Batch  200/269 - Train Accuracy: 0.7562, Validation Accuracy: 0.7552, Loss: 0.2963
+Epoch   6 Batch  220/269 - Train Accuracy: 0.7715, Validation Accuracy: 0.7597, Loss: 0.2668
+Epoch   6 Batch  240/269 - Train Accuracy: 0.7902, Validation Accuracy: 0.7749, Loss: 0.2392
+Epoch   6 Batch  260/269 - Train Accuracy: 0.7664, Validation Accuracy: 0.7659, Loss: 0.2748
+Epoch   7 Batch   20/269 - Train Accuracy: 0.7856, Validation Accuracy: 0.7963, Loss: 0.2583
+Epoch   7 Batch   40/269 - Train Accuracy: 0.7687, Validation Accuracy: 0.7892, Loss: 0.2604
+Epoch   7 Batch   60/269 - Train Accuracy: 0.7971, Validation Accuracy: 0.7920, Loss: 0.2369
+Epoch   7 Batch   80/269 - Train Accuracy: 0.8061, Validation Accuracy: 0.7916, Loss: 0.2364
+Epoch   7 Batch  100/269 - Train Accuracy: 0.8214, Validation Accuracy: 0.8036, Loss: 0.2285
+Epoch   7 Batch  120/269 - Train Accuracy: 0.8017, Validation Accuracy: 0.7946, Loss: 0.2318
+Epoch   7 Batch  140/269 - Train Accuracy: 0.8104, Validation Accuracy: 0.8034, Loss: 0.2217
+Epoch   7 Batch  160/269 - Train Accuracy: 0.7945, Validation Accuracy: 0.8020, Loss: 0.2204
+Epoch   7 Batch  180/269 - Train Accuracy: 0.8078, Validation Accuracy: 0.7982, Loss: 0.2163
+Epoch   7 Batch  200/269 - Train Accuracy: 0.8229, Validation Accuracy: 0.8110, Loss: 0.2187
+Epoch   7 Batch  220/269 - Train Accuracy: 0.8169, Validation Accuracy: 0.8015, Loss: 0.1979
+Epoch   7 Batch  240/269 - Train Accuracy: 0.8280, Validation Accuracy: 0.8097, Loss: 0.1831
+Epoch   7 Batch  260/269 - Train Accuracy: 0.7188, Validation Accuracy: 0.7443, Loss: 0.3022
+Epoch   8 Batch   20/269 - Train Accuracy: 0.7907, Validation Accuracy: 0.7816, Loss: 0.2341
+Epoch   8 Batch   40/269 - Train Accuracy: 0.7893, Validation Accuracy: 0.8026, Loss: 0.2212
+Epoch   8 Batch   60/269 - Train Accuracy: 0.8110, Validation Accuracy: 0.8089, Loss: 0.2007
+Epoch   8 Batch   80/269 - Train Accuracy: 0.8354, Validation Accuracy: 0.8231, Loss: 0.1902
+Epoch   8 Batch  100/269 - Train Accuracy: 0.8358, Validation Accuracy: 0.8297, Loss: 0.1886
+Epoch   8 Batch  120/269 - Train Accuracy: 0.8313, Validation Accuracy: 0.8256, Loss: 0.1906
+Epoch   8 Batch  140/269 - Train Accuracy: 0.8340, Validation Accuracy: 0.8192, Loss: 0.1744
+Epoch   8 Batch  160/269 - Train Accuracy: 0.8322, Validation Accuracy: 0.8456, Loss: 0.1772
+Epoch   8 Batch  180/269 - Train Accuracy: 0.8457, Validation Accuracy: 0.8335, Loss: 0.1699
+Epoch   8 Batch  200/269 - Train Accuracy: 0.8577, Validation Accuracy: 0.8470, Loss: 0.1716
+Epoch   8 Batch  220/269 - Train Accuracy: 0.8553, Validation Accuracy: 0.8508, Loss: 0.1536
+Epoch   8 Batch  240/269 - Train Accuracy: 0.8658, Validation Accuracy: 0.8522, Loss: 0.1382
+Epoch   8 Batch  260/269 - Train Accuracy: 0.8383, Validation Accuracy: 0.8571, Loss: 0.1661
+Epoch   9 Batch   20/269 - Train Accuracy: 0.8426, Validation Accuracy: 0.8578, Loss: 0.1592
+Epoch   9 Batch   40/269 - Train Accuracy: 0.8419, Validation Accuracy: 0.8501, Loss: 0.1581
+Epoch   9 Batch   60/269 - Train Accuracy: 0.8702, Validation Accuracy: 0.8645, Loss: 0.1423
+Epoch   9 Batch   80/269 - Train Accuracy: 0.8790, Validation Accuracy: 0.8778, Loss: 0.1375
+Epoch   9 Batch  100/269 - Train Accuracy: 0.8799, Validation Accuracy: 0.8716, Loss: 0.1338
+Epoch   9 Batch  120/269 - Train Accuracy: 0.8778, Validation Accuracy: 0.8701, Loss: 0.1458
+Epoch   9 Batch  140/269 - Train Accuracy: 0.8651, Validation Accuracy: 0.8733, Loss: 0.1325
+Epoch   9 Batch  160/269 - Train Accuracy: 0.8635, Validation Accuracy: 0.8821, Loss: 0.1261
+Epoch   9 Batch  180/269 - Train Accuracy: 0.8904, Validation Accuracy: 0.8779, Loss: 0.1245
+Epoch   9 Batch  200/269 - Train Accuracy: 0.8925, Validation Accuracy: 0.8779, Loss: 0.1258
+Epoch   9 Batch  220/269 - Train Accuracy: 0.9019, Validation Accuracy: 0.8872, Loss: 0.1178
+Epoch   9 Batch  240/269 - Train Accuracy: 0.8966, Validation Accuracy: 0.8882, Loss: 0.1016
+Epoch   9 Batch  260/269 - Train Accuracy: 0.8885, Validation Accuracy: 0.8913, Loss: 0.1250
+Epoch  10 Batch   20/269 - Train Accuracy: 0.8844, Validation Accuracy: 0.8882, Loss: 0.1203
+Epoch  10 Batch   40/269 - Train Accuracy: 0.8945, Validation Accuracy: 0.8849, Loss: 0.1180
+Epoch  10 Batch   60/269 - Train Accuracy: 0.9083, Validation Accuracy: 0.9015, Loss: 0.1049
+Epoch  10 Batch   80/269 - Train Accuracy: 0.9004, Validation Accuracy: 0.8968, Loss: 0.1048
+Epoch  10 Batch  100/269 - Train Accuracy: 0.9040, Validation Accuracy: 0.8902, Loss: 0.1021
+Epoch  10 Batch  120/269 - Train Accuracy: 0.9062, Validation Accuracy: 0.9026, Loss: 0.1051
+Epoch  10 Batch  140/269 - Train Accuracy: 0.8948, Validation Accuracy: 0.9048, Loss: 0.1019
+Epoch  10 Batch  160/269 - Train Accuracy: 0.9008, Validation Accuracy: 0.9117, Loss: 0.1013
+Epoch  10 Batch  180/269 - Train Accuracy: 0.9195, Validation Accuracy: 0.8968, Loss: 0.0952
+Epoch  10 Batch  200/269 - Train Accuracy: 0.9141, Validation Accuracy: 0.9042, Loss: 0.0944
+Epoch  10 Batch  220/269 - Train Accuracy: 0.9188, Validation Accuracy: 0.9083, Loss: 0.0899
+Epoch  10 Batch  240/269 - Train Accuracy: 0.9236, Validation Accuracy: 0.9054, Loss: 0.0763
+Epoch  10 Batch  260/269 - Train Accuracy: 0.9076, Validation Accuracy: 0.9103, Loss: 0.0943
+Epoch  11 Batch   20/269 - Train Accuracy: 0.9061, Validation Accuracy: 0.9131, Loss: 0.0867
+Epoch  11 Batch   40/269 - Train Accuracy: 0.9202, Validation Accuracy: 0.9189, Loss: 0.0858
+Epoch  11 Batch   60/269 - Train Accuracy: 0.9220, Validation Accuracy: 0.9176, Loss: 0.0815
+Epoch  11 Batch   80/269 - Train Accuracy: 0.9211, Validation Accuracy: 0.9216, Loss: 0.0801
+Epoch  11 Batch  100/269 - Train Accuracy: 0.9151, Validation Accuracy: 0.9179, Loss: 0.0768
+Epoch  11 Batch  120/269 - Train Accuracy: 0.9262, Validation Accuracy: 0.9230, Loss: 0.0852
+Epoch  11 Batch  140/269 - Train Accuracy: 0.9184, Validation Accuracy: 0.9341, Loss: 0.0767
+Epoch  11 Batch  160/269 - Train Accuracy: 0.9312, Validation Accuracy: 0.9348, Loss: 0.0715
+Epoch  11 Batch  180/269 - Train Accuracy: 0.9335, Validation Accuracy: 0.9270, Loss: 0.0707
+Epoch  11 Batch  200/269 - Train Accuracy: 0.9392, Validation Accuracy: 0.9368, Loss: 0.0708
+Epoch  11 Batch  220/269 - Train Accuracy: 0.9308, Validation Accuracy: 0.9324, Loss: 0.0674
+Epoch  11 Batch  240/269 - Train Accuracy: 0.9355, Validation Accuracy: 0.9293, Loss: 0.0582
+Epoch  11 Batch  260/269 - Train Accuracy: 0.9280, Validation Accuracy: 0.9290, Loss: 0.0704
+Epoch  12 Batch   20/269 - Train Accuracy: 0.9221, Validation Accuracy: 0.9389, Loss: 0.0655
+Epoch  12 Batch   40/269 - Train Accuracy: 0.9474, Validation Accuracy: 0.9358, Loss: 0.0648
+Epoch  12 Batch   60/269 - Train Accuracy: 0.9441, Validation Accuracy: 0.9412, Loss: 0.0614
+Epoch  12 Batch   80/269 - Train Accuracy: 0.9430, Validation Accuracy: 0.9356, Loss: 0.0583
+Epoch  12 Batch  100/269 - Train Accuracy: 0.9357, Validation Accuracy: 0.9377, Loss: 0.0586
+Epoch  12 Batch  120/269 - Train Accuracy: 0.9437, Validation Accuracy: 0.9438, Loss: 0.0617
+Epoch  12 Batch  140/269 - Train Accuracy: 0.9341, Validation Accuracy: 0.9407, Loss: 0.0603
+Epoch  12 Batch  160/269 - Train Accuracy: 0.9268, Validation Accuracy: 0.9458, Loss: 0.0590
+Epoch  12 Batch  180/269 - Train Accuracy: 0.9517, Validation Accuracy: 0.9419, Loss: 0.0507
+Epoch  12 Batch  200/269 - Train Accuracy: 0.9510, Validation Accuracy: 0.9515, Loss: 0.0504
+Epoch  12 Batch  220/269 - Train Accuracy: 0.9442, Validation Accuracy: 0.9513, Loss: 0.0500
+Epoch  12 Batch  240/269 - Train Accuracy: 0.9452, Validation Accuracy: 0.9407, Loss: 0.0431
+Epoch  12 Batch  260/269 - Train Accuracy: 0.9397, Validation Accuracy: 0.9405, Loss: 0.0560
+Epoch  13 Batch   20/269 - Train Accuracy: 0.9448, Validation Accuracy: 0.9416, Loss: 0.0487
+Epoch  13 Batch   40/269 - Train Accuracy: 0.9551, Validation Accuracy: 0.9478, Loss: 0.0483
+Epoch  13 Batch   60/269 - Train Accuracy: 0.9547, Validation Accuracy: 0.9511, Loss: 0.0453
+Epoch  13 Batch   80/269 - Train Accuracy: 0.9497, Validation Accuracy: 0.9446, Loss: 0.0440
+Epoch  13 Batch  100/269 - Train Accuracy: 0.9482, Validation Accuracy: 0.9471, Loss: 0.0417
+Epoch  13 Batch  120/269 - Train Accuracy: 0.9447, Validation Accuracy: 0.9482, Loss: 0.0487
+Epoch  13 Batch  140/269 - Train Accuracy: 0.9490, Validation Accuracy: 0.9480, Loss: 0.0484
+Epoch  13 Batch  160/269 - Train Accuracy: 0.9434, Validation Accuracy: 0.9578, Loss: 0.0434
+Epoch  13 Batch  180/269 - Train Accuracy: 0.9595, Validation Accuracy: 0.9457, Loss: 0.0415
+Epoch  13 Batch  200/269 - Train Accuracy: 0.9552, Validation Accuracy: 0.9499, Loss: 0.0394
+Epoch  13 Batch  220/269 - Train Accuracy: 0.9469, Validation Accuracy: 0.9532, Loss: 0.0395
+Epoch  13 Batch  240/269 - Train Accuracy: 0.9544, Validation Accuracy: 0.9503, Loss: 0.0338
+Epoch  13 Batch  260/269 - Train Accuracy: 0.9478, Validation Accuracy: 0.9514, Loss: 0.0407
+Epoch  14 Batch   20/269 - Train Accuracy: 0.9492, Validation Accuracy: 0.9554, Loss: 0.0370
+Epoch  14 Batch   40/269 - Train Accuracy: 0.9650, Validation Accuracy: 0.9521, Loss: 0.0387
+Epoch  14 Batch   60/269 - Train Accuracy: 0.9570, Validation Accuracy: 0.9597, Loss: 0.0347
+Epoch  14 Batch   80/269 - Train Accuracy: 0.9533, Validation Accuracy: 0.9503, Loss: 0.0346
+Epoch  14 Batch  100/269 - Train Accuracy: 0.9552, Validation Accuracy: 0.9561, Loss: 0.0324
+Epoch  14 Batch  120/269 - Train Accuracy: 0.9614, Validation Accuracy: 0.9513, Loss: 0.0390
+Epoch  14 Batch  140/269 - Train Accuracy: 0.9561, Validation Accuracy: 0.9593, Loss: 0.0383
+Epoch  14 Batch  160/269 - Train Accuracy: 0.9463, Validation Accuracy: 0.9602, Loss: 0.0342
+Epoch  14 Batch  180/269 - Train Accuracy: 0.9643, Validation Accuracy: 0.9453, Loss: 0.0514
+Epoch  14 Batch  200/269 - Train Accuracy: 0.9584, Validation Accuracy: 0.9538, Loss: 0.0347
+Epoch  14 Batch  220/269 - Train Accuracy: 0.9549, Validation Accuracy: 0.9531, Loss: 0.0331
+Epoch  14 Batch  240/269 - Train Accuracy: 0.9610, Validation Accuracy: 0.9537, Loss: 0.0285
+Epoch  14 Batch  260/269 - Train Accuracy: 0.9556, Validation Accuracy: 0.9565, Loss: 0.0333
+Epoch  15 Batch   20/269 - Train Accuracy: 0.9608, Validation Accuracy: 0.9562, Loss: 0.0306
+Epoch  15 Batch   40/269 - Train Accuracy: 0.9679, Validation Accuracy: 0.9593, Loss: 0.0316
+Epoch  15 Batch   60/269 - Train Accuracy: 0.9608, Validation Accuracy: 0.9589, Loss: 0.0299
+Epoch  15 Batch   80/269 - Train Accuracy: 0.9608, Validation Accuracy: 0.9486, Loss: 0.0304
+Epoch  15 Batch  100/269 - Train Accuracy: 0.9577, Validation Accuracy: 0.9548, Loss: 0.0293
+Epoch  15 Batch  120/269 - Train Accuracy: 0.9578, Validation Accuracy: 0.9502, Loss: 0.0325
+Epoch  15 Batch  140/269 - Train Accuracy: 0.9567, Validation Accuracy: 0.9624, Loss: 0.0324
+Epoch  15 Batch  160/269 - Train Accuracy: 0.9532, Validation Accuracy: 0.9608, Loss: 0.0281
+Epoch  15 Batch  180/269 - Train Accuracy: 0.9721, Validation Accuracy: 0.9552, Loss: 0.0264
+Epoch  15 Batch  200/269 - Train Accuracy: 0.9712, Validation Accuracy: 0.9566, Loss: 0.0272
+Epoch  15 Batch  220/269 - Train Accuracy: 0.9605, Validation Accuracy: 0.9542, Loss: 0.0271
+Epoch  15 Batch  240/269 - Train Accuracy: 0.9654, Validation Accuracy: 0.9603, Loss: 0.0275
+Epoch  15 Batch  260/269 - Train Accuracy: 0.9614, Validation Accuracy: 0.9553, Loss: 0.0339
+Epoch  16 Batch   20/269 - Train Accuracy: 0.9633, Validation Accuracy: 0.9631, Loss: 0.0257
+Epoch  16 Batch   40/269 - Train Accuracy: 0.9725, Validation Accuracy: 0.9626, Loss: 0.0277
+Epoch  16 Batch   60/269 - Train Accuracy: 0.9664, Validation Accuracy: 0.9620, Loss: 0.0274
+Epoch  16 Batch   80/269 - Train Accuracy: 0.9605, Validation Accuracy: 0.9547, Loss: 0.0251
+Epoch  16 Batch  100/269 - Train Accuracy: 0.9614, Validation Accuracy: 0.9575, Loss: 0.0249
+Epoch  16 Batch  120/269 - Train Accuracy: 0.9625, Validation Accuracy: 0.9619, Loss: 0.0272
+Epoch  16 Batch  140/269 - Train Accuracy: 0.9603, Validation Accuracy: 0.9657, Loss: 0.0279
+Epoch  16 Batch  160/269 - Train Accuracy: 0.9572, Validation Accuracy: 0.9599, Loss: 0.0238
+Epoch  16 Batch  180/269 - Train Accuracy: 0.9759, Validation Accuracy: 0.9602, Loss: 0.0233
+Epoch  16 Batch  200/269 - Train Accuracy: 0.9750, Validation Accuracy: 0.9624, Loss: 0.0219
+Epoch  16 Batch  220/269 - Train Accuracy: 0.9701, Validation Accuracy: 0.9600, Loss: 0.0253
+Epoch  16 Batch  240/269 - Train Accuracy: 0.9639, Validation Accuracy: 0.9608, Loss: 0.0210
+Epoch  16 Batch  260/269 - Train Accuracy: 0.9550, Validation Accuracy: 0.9451, Loss: 0.0367
+Epoch  17 Batch   20/269 - Train Accuracy: 0.9653, Validation Accuracy: 0.9588, Loss: 0.0248
+Epoch  17 Batch   40/269 - Train Accuracy: 0.9734, Validation Accuracy: 0.9577, Loss: 0.0275
+Epoch  17 Batch   60/269 - Train Accuracy: 0.9717, Validation Accuracy: 0.9646, Loss: 0.0228
+Epoch  17 Batch   80/269 - Train Accuracy: 0.9618, Validation Accuracy: 0.9557, Loss: 0.0214
+Epoch  17 Batch  100/269 - Train Accuracy: 0.9609, Validation Accuracy: 0.9614, Loss: 0.0217
+Epoch  17 Batch  120/269 - Train Accuracy: 0.9676, Validation Accuracy: 0.9610, Loss: 0.0261
+Epoch  17 Batch  140/269 - Train Accuracy: 0.9648, Validation Accuracy: 0.9610, Loss: 0.0241
+Epoch  17 Batch  160/269 - Train Accuracy: 0.9615, Validation Accuracy: 0.9636, Loss: 0.0207
+Epoch  17 Batch  180/269 - Train Accuracy: 0.9774, Validation Accuracy: 0.9561, Loss: 0.0195
+Epoch  17 Batch  200/269 - Train Accuracy: 0.9768, Validation Accuracy: 0.9648, Loss: 0.0201
+Epoch  17 Batch  220/269 - Train Accuracy: 0.9745, Validation Accuracy: 0.9639, Loss: 0.0199
+Epoch  17 Batch  240/269 - Train Accuracy: 0.9760, Validation Accuracy: 0.9617, Loss: 0.0187
+Epoch  17 Batch  260/269 - Train Accuracy: 0.9692, Validation Accuracy: 0.9593, Loss: 0.0238
+Epoch  18 Batch   20/269 - Train Accuracy: 0.9713, Validation Accuracy: 0.9632, Loss: 0.0200
+Epoch  18 Batch   40/269 - Train Accuracy: 0.9774, Validation Accuracy: 0.9616, Loss: 0.0211
+Epoch  18 Batch   60/269 - Train Accuracy: 0.9712, Validation Accuracy: 0.9614, Loss: 0.0215
+Epoch  18 Batch   80/269 - Train Accuracy: 0.9654, Validation Accuracy: 0.9608, Loss: 0.0190
+Epoch  18 Batch  100/269 - Train Accuracy: 0.9676, Validation Accuracy: 0.9688, Loss: 0.0193
+Epoch  18 Batch  120/269 - Train Accuracy: 0.9728, Validation Accuracy: 0.9603, Loss: 0.0220
+Epoch  18 Batch  140/269 - Train Accuracy: 0.9661, Validation Accuracy: 0.9659, Loss: 0.0229
+Epoch  18 Batch  160/269 - Train Accuracy: 0.9640, Validation Accuracy: 0.9692, Loss: 0.0192
+Epoch  18 Batch  180/269 - Train Accuracy: 0.9812, Validation Accuracy: 0.9608, Loss: 0.0169
+Epoch  18 Batch  200/269 - Train Accuracy: 0.9794, Validation Accuracy: 0.9679, Loss: 0.0179
+Epoch  18 Batch  220/269 - Train Accuracy: 0.9762, Validation Accuracy: 0.9621, Loss: 0.0198
+Epoch  18 Batch  240/269 - Train Accuracy: 0.9778, Validation Accuracy: 0.9691, Loss: 0.0165
+Epoch  18 Batch  260/269 - Train Accuracy: 0.9697, Validation Accuracy: 0.9643, Loss: 0.0218
+Epoch  19 Batch   20/269 - Train Accuracy: 0.9782, Validation Accuracy: 0.9663, Loss: 0.0182
+Epoch  19 Batch   40/269 - Train Accuracy: 0.9786, Validation Accuracy: 0.9665, Loss: 0.0197
+Epoch  19 Batch   60/269 - Train Accuracy: 0.9730, Validation Accuracy: 0.9621, Loss: 0.0207
+Epoch  19 Batch   80/269 - Train Accuracy: 0.9642, Validation Accuracy: 0.9553, Loss: 0.0221
+Epoch  19 Batch  100/269 - Train Accuracy: 0.9714, Validation Accuracy: 0.9612, Loss: 0.0214
+Epoch  19 Batch  120/269 - Train Accuracy: 0.9766, Validation Accuracy: 0.9661, Loss: 0.0205
+Epoch  19 Batch  140/269 - Train Accuracy: 0.9701, Validation Accuracy: 0.9697, Loss: 0.0203
+Epoch  19 Batch  160/269 - Train Accuracy: 0.9709, Validation Accuracy: 0.9716, Loss: 0.0175
+Epoch  19 Batch  180/269 - Train Accuracy: 0.9769, Validation Accuracy: 0.9620, Loss: 0.0168
+Epoch  19 Batch  200/269 - Train Accuracy: 0.9867, Validation Accuracy: 0.9676, Loss: 0.0164
+Epoch  19 Batch  220/269 - Train Accuracy: 0.9756, Validation Accuracy: 0.9708, Loss: 0.0173
+Epoch  19 Batch  240/269 - Train Accuracy: 0.9765, Validation Accuracy: 0.9681, Loss: 0.0152
+Epoch  19 Batch  260/269 - Train Accuracy: 0.9741, Validation Accuracy: 0.9616, Loss: 0.0196
 Model Trained and Saved
 </pre>
 </div>
@@ -13017,8 +13216,7 @@ Model Trained and Saved
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13029,7 +13227,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13044,8 +13242,7 @@ Model Trained and Saved
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13055,7 +13252,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
@@ -13075,8 +13272,7 @@ Model Trained and Saved
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13094,7 +13290,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">sentence_to_seq</span><span class="p">(</span><span class="n">sentence</span><span class="p">,</span> <span class="n">vocab_to_int</span><span class="p">):</span>
@@ -13127,7 +13323,9 @@ Model Trained and Saved
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Tests Passed
@@ -13139,8 +13337,7 @@ Model Trained and Saved
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13151,7 +13348,7 @@ Model Trained and Saved
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">translate_sentence</span> <span class="o">=</span> <span class="s1">&#39;he saw a old yellow truck .&#39;</span>
@@ -13197,17 +13394,19 @@ Model Trained and Saved
 
 
 <div class="output_area">
+
 <div class="prompt"></div>
+
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>INFO:tensorflow:Restoring parameters from checkpoints/dev
 Input
-  Word Ids:      [199, 102, 208, 6, 118, 13, 165]
+  Word Ids:      [30, 135, 176, 106, 52, 147, 60]
   English Words: [&#39;he&#39;, &#39;saw&#39;, &#39;a&#39;, &#39;old&#39;, &#39;yellow&#39;, &#39;truck&#39;, &#39;.&#39;]
 
 Prediction
-  Word Ids:      [135, 47, 282, 52, 164, 180, 264, 135, 47, 270, 196, 312, 61, 1]
-  French Words: il est généralement au printemps , mais il est pluvieux en juillet . &lt;EOS&gt;
+  Word Ids:      [313, 234, 322, 104, 142, 247, 261, 179, 1]
+  French Words: il a vu un vieux camion noir . &lt;EOS&gt;
 </pre>
 </div>
 </div>
@@ -13216,8 +13415,7 @@ Prediction
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
